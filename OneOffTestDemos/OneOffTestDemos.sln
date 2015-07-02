@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bss.StarWars.Business", "LibraryUnderTest\Bss.StarWars.Business.csproj", "{3CFB47FC-B8BD-4B6E-B6DD-AC8343E8DF9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bss.StarWars", "EntitiesLibrary\Bss.StarWars.csproj", "{0670B398-F80C-45BB-85B0-E0A586A43102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bss.StarWars.Business.Test", "Bss.StarWars.Business.Test\Bss.StarWars.Business.Test.csproj", "{A75C7A8F-1E12-4DAD-9ABA-FB26CF963A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CFB47FC-B8BD-4B6E-B6DD-AC8343E8DF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFB47FC-B8BD-4B6E-B6DD-AC8343E8DF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFB47FC-B8BD-4B6E-B6DD-AC8343E8DF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFB47FC-B8BD-4B6E-B6DD-AC8343E8DF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0670B398-F80C-45BB-85B0-E0A586A43102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0670B398-F80C-45BB-85B0-E0A586A43102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0670B398-F80C-45BB-85B0-E0A586A43102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0670B398-F80C-45BB-85B0-E0A586A43102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75C7A8F-1E12-4DAD-9ABA-FB26CF963A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75C7A8F-1E12-4DAD-9ABA-FB26CF963A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75C7A8F-1E12-4DAD-9ABA-FB26CF963A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75C7A8F-1E12-4DAD-9ABA-FB26CF963A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
