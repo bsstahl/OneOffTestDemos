@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntitiesLibrary\Bss.StarWars.csproj">
+    <ProjectReference Include="..\Bss.StarWars\Bss.StarWars.csproj">
       <Project>{0670b398-f80c-45bb-85b0-e0a586a43102}</Project>
       <Name>Bss.StarWars</Name>
     </ProjectReference>
