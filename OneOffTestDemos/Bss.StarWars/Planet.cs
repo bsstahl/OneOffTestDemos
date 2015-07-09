@@ -17,6 +17,5 @@ namespace Bss.StarWars
         public string Terrains { get; set;}
         public int? SurfaceWater { get; set; }
         public int Population { get; set;}
-        public int MyProperty { get; set; }
     }
 }

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,9 +53,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Db.cs" />
     <Compile Include="PlanetLocator_Scout_Should.cs" />
-    <Compile Include="PlanetRepositoryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bss.StarWars.Business\Bss.StarWars.Business.csproj">
+      <Project>{3cfb47fc-b8bd-4b6e-b6dd-ac8343e8df9f}</Project>
+      <Name>Bss.StarWars.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bss.StarWars\Bss.StarWars.csproj">
+      <Project>{0670b398-f80c-45bb-85b0-e0a586a43102}</Project>
+      <Name>Bss.StarWars</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
