@@ -8,16 +8,18 @@ namespace Bss.StarWars.Business
 {
     public class PlanetLocator
     {
+        IPlanetRepository _planetRepository;
+
         public PlanetLocator(IPlanetRepository planetRepository)
         {
-            throw new NotImplementedException();
+            _planetRepository = planetRepository;
         }
 
         // Finds all planets that meet your
         // minimum standards for residence
-        public IEnumerable<Planet> Scout()
+        public IEnumerable<Planet> Scout(Species species)
         {
-            throw new NotImplementedException();
+            return _planetRepository.GetAll();
         }
 
         // Recommends the best planet for you
