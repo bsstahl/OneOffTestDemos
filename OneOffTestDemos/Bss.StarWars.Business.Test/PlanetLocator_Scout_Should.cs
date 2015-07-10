@@ -15,13 +15,13 @@ namespace Bss.StarWars.Business.Test
         {
             // Arrange
             var mocks = new Rhino.Mocks.MockRepository();
-            var planetRepository = Db.GetPlanetRepository(mocks);
+            var planetRepository = PlanetRepositoryHelper.GetPlanetRepository(mocks);
             Rhino.Mocks.Expect.Call(planetRepository.GetAll()).Return(new List<Planet>());
             mocks.ReplayAll();
 
             // Act
             var target = new Bss.StarWars.Business.PlanetLocator(planetRepository);
-            var actual = target.Scout(null) as IEnumerable;
+            var actual = target.Scout(SpeciesName.Unknown) as IEnumerable;
             
             // Assert
             Assert.IsNotNull(actual);
@@ -33,16 +33,35 @@ namespace Bss.StarWars.Business.Test
             // Arrange
             var planets = new List<Planet>();
             var mocks = new Rhino.Mocks.MockRepository();
-            var planetRepository = Db.GetPlanetRepository(mocks);
+            var planetRepository = PlanetRepositoryHelper.GetPlanetRepository(mocks);
             Rhino.Mocks.Expect.Call(planetRepository.GetAll()).Repeat.Any().Return(planets);
             mocks.ReplayAll();
 
             // Act
             var target = new Bss.StarWars.Business.PlanetLocator(planetRepository);
-            var actual = target.Scout(null);
+            var actual = target.Scout(SpeciesName.Unknown);
 
             // Assert
             Assert.IsFalse(actual.Any());
         }
+
+        [TestMethod]
+        public void OnlyReturnPlanetsWithOneStandardGravityForHumans()
+        {
+            // Arrange
+            var planets = PlanetRepositoryHelper.GetBasicPlanetList();
+            var mocks = new Rhino.Mocks.MockRepository();
+            var planetRepository = PlanetRepositoryHelper.GetPlanetRepository(mocks);
+            Rhino.Mocks.Expect.Call(planetRepository.GetAll()).Repeat.Any().Return(planets);
+            mocks.ReplayAll();
+
+            // Act
+            var target = new Bss.StarWars.Business.PlanetLocator(planetRepository);
+            var actual = target.Scout(SpeciesName.Human);
+
+            // Assert
+            Assert.IsFalse(actual.Any(p => !p.GravityTypes.Contains("1 standard")));
+        }
+
     }
 }

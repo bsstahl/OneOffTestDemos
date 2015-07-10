@@ -17,7 +17,7 @@ namespace Bss.StarWars.Business
 
         // Finds all planets that meet your
         // minimum standards for residence
-        public IEnumerable<Planet> Scout(Species species)
+        public IEnumerable<Planet> Scout(SpeciesName species)
         {
             return _planetRepository.GetAll();
         }

@@ -53,7 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Db.cs" />
+    <Compile Include="PlanetRepositoryHelper.cs" />
     <Compile Include="PlanetLocator_Scout_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
