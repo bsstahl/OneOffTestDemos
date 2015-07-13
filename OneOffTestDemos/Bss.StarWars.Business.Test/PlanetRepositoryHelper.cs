@@ -31,12 +31,23 @@ namespace Bss.StarWars.Business.Test
 
         internal static Planet CreatePlanetWithOneStandardGravity()
         {
-            throw new NotImplementedException();
+            var gravityTypes = new List<string>() { "1 standard" };
+            return CreatePlanet(gravityTypes);
         }
 
         internal static Planet CreatePlanetWithNonStandardGravity()
         {
-            throw new NotImplementedException();
+            var gravityTypes = new List<string>() { "1.1 standard" }; // TODO: Change to random
+            return CreatePlanet(gravityTypes);
+        }
+
+        internal static Planet CreatePlanet(IEnumerable<string> gravityTypes)
+        {
+            return new Planet()
+            {
+                Name = Guid.NewGuid().ToString(), // TODO: Change to random
+                GravityTypes = gravityTypes
+            };
         }
     }
 }

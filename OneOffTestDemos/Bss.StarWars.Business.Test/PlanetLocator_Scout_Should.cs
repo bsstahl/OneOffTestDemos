@@ -10,6 +10,8 @@ namespace Bss.StarWars.Business.Test
     [TestClass]
     public class PlanetLocator_Scout_Should
     {
+        public TestContext TestContext { get; set; }
+
         [TestMethod]
         public void ReturnAValidCollectionType()
         {
@@ -60,7 +62,10 @@ namespace Bss.StarWars.Business.Test
             var actual = target.Scout(SpeciesName.Human);
 
             // Assert
-            Assert.IsFalse(actual.Any(p => !p.GravityTypes.Contains("1 standard")));
+            var actualNonStandardGravity = actual.Where(p => !p.GravityTypes.Contains("1 standard"));
+
+            actualNonStandardGravity.ToList().ForEach(p => TestContext.WriteLine(p.ToString()));
+            Assert.IsTrue(actualNonStandardGravity.Count() == 0);
         }
 
     }
