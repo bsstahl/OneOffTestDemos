@@ -16,11 +16,11 @@ namespace Bss.StarWars.Business.Test
             var db = (null as IPlanetRepository).GetRepository(mocks);
 
             var allPlanets = new List<Planet>();
-            allPlanets.Add((null as Planet).Create("0.5"));
-            allPlanets.Add((null as Planet).Create("1"));
-            allPlanets.Add((null as Planet).Create("0.7"));
-            allPlanets.Add((null as Planet).Create("1"));
-            allPlanets.Add((null as Planet).Create("1.1"));
+            allPlanets.Add((null as Planet).Create(0.5f));
+            allPlanets.Add((null as Planet).Create(1));
+            allPlanets.Add((null as Planet).Create(0.7f));
+            allPlanets.Add((null as Planet).Create(1));
+            allPlanets.Add((null as Planet).Create(1.1f));
 
             Rhino.Mocks
                 .Expect.Call(db.GetAllPlanets())
