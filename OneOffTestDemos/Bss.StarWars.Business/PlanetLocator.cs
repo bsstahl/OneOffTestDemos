@@ -8,6 +8,9 @@ namespace Bss.StarWars.Business
 {
     public class PlanetLocator
     {
+        const Single _minGravityForScout = 0.95f;
+        const Single _maxGravityForScout = 1.05f;
+
         IPlanetRepository _planetRepository;
         public PlanetLocator(IPlanetRepository planetRepository)
         {
@@ -16,7 +19,8 @@ namespace Bss.StarWars.Business
 
         public IEnumerable<Planet> Scout()
         {
-            throw new NotImplementedException();
+            return _planetRepository.GetAllPlanets()
+                .Where(p => p.Gravity > _minGravityForScout && p.Gravity < _maxGravityForScout);
         }
     }
 }
