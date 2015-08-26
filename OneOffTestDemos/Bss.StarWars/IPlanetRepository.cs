@@ -8,6 +8,6 @@ namespace Bss.StarWars
 {
     public interface IPlanetRepository
     {
-       
+        IEnumerable<Planet> GetAllPlanets();
     }
 }

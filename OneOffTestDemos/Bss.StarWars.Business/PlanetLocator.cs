@@ -8,6 +8,12 @@ namespace Bss.StarWars.Business
 {
     public class PlanetLocator
     {
+        IPlanetRepository _planetRepository;
+        public PlanetLocator(IPlanetRepository planetRepository)
+        {
+            _planetRepository = planetRepository;
+        }
+
         public IEnumerable<Planet> Scout()
         {
             throw new NotImplementedException();

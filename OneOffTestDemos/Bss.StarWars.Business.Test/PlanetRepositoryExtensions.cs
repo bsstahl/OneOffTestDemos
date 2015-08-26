@@ -10,7 +10,13 @@ namespace Bss.StarWars.Business.Test
     {
         public static IPlanetRepository GetRepository(this IPlanetRepository repository)
         {
-            throw new NotImplementedException();
+            var mocks = new Rhino.Mocks.MockRepository();
+            return (null as IPlanetRepository).GetRepository(mocks);
+        }
+
+        public static IPlanetRepository GetRepository(this IPlanetRepository repository, Rhino.Mocks.MockRepository mockRepository)
+        {
+            return mockRepository.DynamicMock<IPlanetRepository>();
         }
     }
 }
