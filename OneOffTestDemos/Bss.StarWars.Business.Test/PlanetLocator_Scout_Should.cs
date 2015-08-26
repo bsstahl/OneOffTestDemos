@@ -10,6 +10,9 @@ namespace Bss.StarWars.Business.Test
     [TestClass]
     public class PlanetLocator_Scout_Should
     {
+        public TestContext TestContext { get; set; }
+
+
         [TestMethod]
         public void ReturnTheCorrectNumberOfPlanetsWithOneGravity()
         {
@@ -49,6 +52,8 @@ namespace Bss.StarWars.Business.Test
             for (int i = 0; i < planetCount; i++)
                 allPlanets.Add((null as Planet).Create());
 
+            TestContext.WriteLine("{0} planets in data store", allPlanets.Count());
+
             Rhino.Mocks
                 .Expect.Call(db.GetAllPlanets())
                 .Repeat.Any()
@@ -58,6 +63,7 @@ namespace Bss.StarWars.Business.Test
 
             var target = new Bss.StarWars.Business.PlanetLocator(db);
             var actual = target.Scout();
+            TestContext.WriteLine("{0} planets returned from target", actual.Count());
 
             foreach (var planet in actual)
                 Assert.IsTrue(planet.Gravity > 0.95);
@@ -76,6 +82,8 @@ namespace Bss.StarWars.Business.Test
             for (int i = 0; i < planetCount; i++)
                 allPlanets.Add((null as Planet).Create());
 
+            TestContext.WriteLine("{0} planets in data store", allPlanets.Count());
+
             Rhino.Mocks
                 .Expect.Call(db.GetAllPlanets())
                 .Repeat.Any()
@@ -85,6 +93,7 @@ namespace Bss.StarWars.Business.Test
 
             var target = new Bss.StarWars.Business.PlanetLocator(db);
             var actual = target.Scout();
+            TestContext.WriteLine("{0} planets returned from target", actual.Count());
 
             foreach (var planet in actual)
                 Assert.IsTrue(planet.Gravity < 1.05);
