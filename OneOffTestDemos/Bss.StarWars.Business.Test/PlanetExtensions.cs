@@ -9,6 +9,12 @@ namespace Bss.StarWars.Business.Test
 {
     public static class PlanetExtensions
     {
+        public static Planet Create(this Planet ignored)
+        {
+            Single gravity = Convert.ToSingle((2.0).GetRandom() + 0.5);
+            return (null as Planet).Create(gravity);
+        }
+
         public static Planet Create(this Planet ignored, Single gravity)
         {
             int population = 0;
