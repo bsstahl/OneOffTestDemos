@@ -64,5 +64,32 @@ namespace Bss.StarWars.Business.Test
 
             mocks.VerifyAll();
         }
+
+        [TestMethod]
+        public void ReturnOnlyPlanetsWithGravityLessThan105PercentOfStandard()
+        {
+            var mocks = new Rhino.Mocks.MockRepository();
+            var db = (null as IPlanetRepository).GetRepository(mocks);
+
+            int planetCount = 100.GetRandom(50);
+            var allPlanets = new List<Planet>();
+            for (int i = 0; i < planetCount; i++)
+                allPlanets.Add((null as Planet).Create());
+
+            Rhino.Mocks
+                .Expect.Call(db.GetAllPlanets())
+                .Repeat.Any()
+                .Return(allPlanets);
+
+            mocks.ReplayAll();
+
+            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var actual = target.Scout();
+
+            foreach (var planet in actual)
+                Assert.IsTrue(planet.Gravity < 1.05);
+
+            mocks.VerifyAll();
+        }
     }
 }
