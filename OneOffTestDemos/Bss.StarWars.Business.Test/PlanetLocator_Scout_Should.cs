@@ -72,5 +72,6 @@ namespace Bss.StarWars.Business.Test
 
             mocks.VerifyAll();
         }
+
     }
 }

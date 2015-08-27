@@ -11,7 +11,7 @@ namespace Bss.StarWars.Business.Test
     {
         public static Planet Create(this Planet ignored)
         {
-            Single gravity = Convert.ToSingle((2.0).GetRandom() + 0.5);
+            Single gravity = Convert.ToSingle((1.25).GetRandom(0.75));
             return (null as Planet).Create(gravity);
         }
 
@@ -20,7 +20,7 @@ namespace Bss.StarWars.Business.Test
             int population = 0;
             if ((gravity > 0.8) && (gravity < 1.2))
             {
-                var orderOfMagnitude = 4.GetRandom(2);
+                var orderOfMagnitude = 5.GetRandom(2);
                 population = 10.GetRandom() * (10 ^ orderOfMagnitude);
             }
 
