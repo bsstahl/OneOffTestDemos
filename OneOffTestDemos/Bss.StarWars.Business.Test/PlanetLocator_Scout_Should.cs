@@ -16,8 +16,7 @@ namespace Bss.StarWars.Business.Test
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void ThrowAnArgumentNullExceptionIfConstructedWithNullRepository()
         {
-            var db = (null as IPlanetRepository).GetRepository(null);
-            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var target = new Bss.StarWars.Business.PlanetLocator(null);
             var actual = target.Scout();
         }
 

@@ -15,6 +15,9 @@ namespace Bss.StarWars.Business
         IPlanetRepository _planetRepository;
         public PlanetLocator(IPlanetRepository planetRepository)
         {
+            if (planetRepository == null)
+                throw new ArgumentNullException("planetRepository");
+
             _planetRepository = planetRepository;
         }
 
