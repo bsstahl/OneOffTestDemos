@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bss.StarWars;
 
-namespace Bss.StarWars.Business.Test
+namespace Bss.IntergalacticRealEstate.MLS.Test
 {
     public static class PlanetRepositoryExtensions
     {

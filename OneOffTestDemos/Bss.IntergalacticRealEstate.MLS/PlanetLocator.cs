@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bss.StarWars;
+using Bss.StarWars.Entities;
 
-namespace Bss.StarWars.Business
+namespace Bss.IntergalacticRealEstate.MLS
 {
     public class PlanetLocator
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bss.StarWars
+namespace Bss.StarWars.Entities
 {
     public class Planet
     {
