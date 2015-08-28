@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestHelperExtensions;
+using Bss.StarWars.Entities;
 
-namespace Bss.StarWars.Business.Test
+namespace Bss.IntergalacticRealEstate.MLS.Test
 {
     public static class PlanetExtensions
     {

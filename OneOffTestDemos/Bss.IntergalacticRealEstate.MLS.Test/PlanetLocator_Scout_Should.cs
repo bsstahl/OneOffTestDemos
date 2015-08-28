@@ -4,8 +4,9 @@ using Bss.StarWars;
 using System.Collections.Generic;
 using System.Linq;
 using TestHelperExtensions;
+using Bss.StarWars.Entities;
 
-namespace Bss.StarWars.Business.Test
+namespace Bss.IntergalacticRealEstate.MLS.Test
 {
     [TestClass]
     public class PlanetLocator_Scout_Should
@@ -40,7 +41,7 @@ namespace Bss.StarWars.Business.Test
 
             mocks.ReplayAll();
 
-            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var target = new PlanetLocator(db);
             var actual = target.Scout();
             TestContext.WriteLine("{0} planets returned from target", actual.Count());
 
@@ -70,7 +71,7 @@ namespace Bss.StarWars.Business.Test
 
             mocks.ReplayAll();
 
-            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var target = new PlanetLocator(db);
             var actual = target.Scout();
             TestContext.WriteLine("{0} planets returned from target", actual.Count());
 
