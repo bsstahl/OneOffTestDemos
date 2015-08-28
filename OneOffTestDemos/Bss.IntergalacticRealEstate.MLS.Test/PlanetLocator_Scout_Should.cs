@@ -17,7 +17,7 @@ namespace Bss.IntergalacticRealEstate.MLS.Test
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void ThrowAnArgumentNullExceptionIfConstructedWithNullRepository()
         {
-            var target = new Bss.StarWars.Business.PlanetLocator(null);
+            var target = new PlanetLocator(null);
             var actual = target.Scout();
         }
 
@@ -102,7 +102,7 @@ namespace Bss.IntergalacticRealEstate.MLS.Test
 
             mocks.ReplayAll();
 
-            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var target = new PlanetLocator(db);
             var actual = target.Scout();
             TestContext.WriteLine("{0} planets returned from target", actual.Count());
 
