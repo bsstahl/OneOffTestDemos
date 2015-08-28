@@ -26,8 +26,8 @@ namespace Bss.IntergalacticRealEstate.MLS
         public IEnumerable<Planet> Scout()
         {
             return _planetRepository.GetAllPlanets()
-                .Where(p => p.Gravity.HasValue && p.Gravity.Value > _minGravityForScout && p.Gravity.Value < _maxGravityForScout)
-                .Where(p => p.Population.HasValue && p.Population.Value > _minPopulationForScout);
+                .Where(p => p.Population.HasValue && p.Population.Value > _minPopulationForScout)
+                .Where(p => p.Gravity.HasValue && p.Gravity.Value > _minGravityForScout && p.Gravity.Value < _maxGravityForScout);
         }
     }
 }
