@@ -73,5 +73,35 @@ namespace Bss.StarWars.Business.Test
             mocks.VerifyAll();
         }
 
+        [TestMethod]
+        public void ReturnOnlyPlanetsWithPopulationGreaterThan10K()
+        {
+            var mocks = new Rhino.Mocks.MockRepository();
+            var db = (null as IPlanetRepository).GetRepository(mocks);
+
+            int planetCount = 100.GetRandom(50);
+            var allPlanets = new List<Planet>();
+            for (int i = 0; i < planetCount; i++)
+                allPlanets.Add((null as Planet).Create());
+
+            TestContext.WriteLine("{0} planets in data store", allPlanets.Count());
+
+            Rhino.Mocks
+                .Expect.Call(db.GetAllPlanets())
+                .Repeat.Any()
+                .Return(allPlanets);
+
+            mocks.ReplayAll();
+
+            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var actual = target.Scout();
+            TestContext.WriteLine("{0} planets returned from target", actual.Count());
+
+            foreach (var planet in actual)
+                Assert.IsTrue(planet.Population > 10000);
+
+            mocks.VerifyAll();
+        }
+
     }
 }
