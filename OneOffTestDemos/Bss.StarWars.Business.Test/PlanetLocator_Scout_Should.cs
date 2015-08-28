@@ -92,6 +92,7 @@ namespace Bss.StarWars.Business.Test
                 allPlanets.Add((null as Planet).Create());
 
             TestContext.WriteLine("{0} planets in data store", allPlanets.Count());
+            TestContext.WriteLine(allPlanets.Print());
 
             Rhino.Mocks
                 .Expect.Call(db.GetAllPlanets())

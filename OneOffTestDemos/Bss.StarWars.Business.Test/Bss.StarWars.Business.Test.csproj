@@ -58,6 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="PlanetEnumerableExtensions.cs" />
     <Compile Include="PlanetExtensions.cs" />
     <Compile Include="PlanetLocator_Scout_Should.cs" />
     <Compile Include="PlanetRepositoryExtensions.cs" />
