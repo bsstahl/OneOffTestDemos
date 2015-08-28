@@ -13,6 +13,14 @@ namespace Bss.StarWars.Business.Test
         public TestContext TestContext { get; set; }
 
 
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        public void ThrowAnArgumentNullExceptionIfConstructedWithNullRepository()
+        {
+            var db = (null as IPlanetRepository).GetRepository(null);
+            var target = new Bss.StarWars.Business.PlanetLocator(db);
+            var actual = target.Scout();
+        }
+
         [TestMethod]
         public void ReturnOnlyPlanetsWithGravityGreaterThan95PercentOfStandard()
         {
