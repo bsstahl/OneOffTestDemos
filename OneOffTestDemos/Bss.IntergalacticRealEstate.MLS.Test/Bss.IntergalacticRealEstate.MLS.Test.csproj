@@ -58,10 +58,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="EnumerablePlanetExtensions.cs" />
-    <Compile Include="PlanetExtensions.cs" />
-    <Compile Include="PlanetLocator_Scout_Should.cs" />
-    <Compile Include="PlanetRepositoryExtensions.cs" />
+    <Compile Include="EnumerableLocationExtensions.cs" />
+    <Compile Include="LocationExtensions.cs" />
+    <Compile Include="Engine_Scout_Should.cs" />
+    <Compile Include="LocationRepositoryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +72,9 @@
       <Project>{253e77e0-20f0-4045-a5db-f5c337d5e392}</Project>
       <Name>Bss.IntergalacticRealEstate.MLS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Bss.StarWars\Bss.StarWars.csproj">
-      <Project>{0670b398-f80c-45bb-85b0-e0a586a43102}</Project>
-      <Name>Bss.StarWars</Name>
+    <ProjectReference Include="..\Bss.IntergalacticRealEstate\Bss.IntergalacticRealEstate.csproj">
+      <Project>{268ade94-7ab5-436a-8c1f-a11090d53b86}</Project>
+      <Name>Bss.IntergalacticRealEstate</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
