@@ -27,7 +27,7 @@ namespace Bss.IntergalacticRealEstate.MLS.Test
                 else if (gravity >= 1.2)
                     populationDensity = 0;
                 else
-                    populationDensity = (15.0).GetRandom(0.5);
+                    populationDensity = (25.0).GetRandom(0.5);
 
             return (null as Location).Create(gravity, populationDensity);
         }
