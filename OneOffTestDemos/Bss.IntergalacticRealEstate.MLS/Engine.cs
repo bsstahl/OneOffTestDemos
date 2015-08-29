@@ -27,7 +27,7 @@ namespace Bss.IntergalacticRealEstate.MLS
         public IEnumerable<Location> Scout()
         {
             return _locationRepository.GetLocations()
-                .Where(p => p.PopulationDensity.HasValue && p.PopulationDensity.Value > _minPopulationDensityForScout)
+                .Where(p => p.PopulationDensity.HasValue && p.PopulationDensity.Value > _minPopulationDensityForScout && p.PopulationDensity.Value < _maxPopulationDensityForScout)
                 .Where(p => p.Gravity.HasValue && p.Gravity.Value > _minGravityForScout && p.Gravity.Value < _maxGravityForScout);
         }
     }
