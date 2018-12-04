@@ -13,14 +13,10 @@ namespace Bss.StarWars
         public int OrbitalPeriod { get; set; }
         public int Diameter { get; set; }
         public IEnumerable<string> ClimateTypes { get; set; }
-        public IEnumerable<string> GravityTypes { get; set; }
-        public IEnumerable<string> Terrains { get; set;}
+        public string GravityTypes { get; set; }
+        public string Terrains { get; set;}
         public int? SurfaceWater { get; set; }
         public int Population { get; set;}
-
-        public override string ToString()
-        {
-            return string.Format("Planet: {0} with {1} gravity", this.Name, string.Join(", ", this.GravityTypes));
-        }
+        public int MyProperty { get; set; }
     }
 }

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Bss.StarWars.Entities;
 
-namespace Bss.StarWars
+namespace Bss.IntergalacticRealEstate
 {
-    public interface IPlanetRepository
+    public interface ILocationRepository
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
-        IEnumerable<Planet> GetAllPlanets();
+        IEnumerable<Entities.Location> GetLocations();
     }
 }

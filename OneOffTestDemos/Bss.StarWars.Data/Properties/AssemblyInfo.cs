@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Bss.StarWars")]
+[assembly: AssemblyTitle("Bss.StarWars.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Bss.StarWars")]
-[assembly: AssemblyCopyright("Copyright © 2015 by Barry S. Stahl")]
+[assembly: AssemblyCompany("US Airways")]
+[assembly: AssemblyProduct("Bss.StarWars.Data")]
+[assembly: AssemblyCopyright("Copyright © US Airways 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8570a2e6-d3bf-47ea-b655-0f059db3327c")]
+[assembly: Guid("2eda0545-6c9e-4850-bf50-3df16e0e73c8")]
 
 // Version information for an assembly consists of the following four values:
 //
